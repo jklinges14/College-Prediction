@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>College Admission Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>College Admission Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="SAT" placeholder="Enter: SAT Score (out of 1600)" required="required" max = "1600" min= "400" />
+
+        <input type="number" name="Subject_tests" placeholder="Enter: Average Subject Test Score(out of 800)" required="required" max = "800" min = "0" step="0.01"/>
+
+        <input type="number" name="Number_of_subject_tests" placeholder="Enter: How many subject tests you have taken" required="required" max = 10 min = 0 />
+
+        <input type="number" name="GPA" placeholder="Enter: Unweighted GPA out of 4.0" required="required" max = "4" min = "0" step="0.01"/>
+
+        <select name="Rank">
+          <option value="Top 10%">Ranked in the top 10% of class</option>
+          <option value="Not Top 10%">Not ranked in the top 10% of class</option>
+        </select>
+
+        <select name="Gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="NA">Neither</option>
+        </select>
+
+        <select name="Ethnicity">
+          <option value="Minority">Underrepressented Minority</option>
+          <option value="Not Minority">Not an underrepressented Minority</option>
+        </select>
+
+    <select name="School_Type">
+          <option value="Public">Public School</option>
+          <option value="Private">Private School</option>
+          <option value="Home">Home School</option>
+    </select>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
