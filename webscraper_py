@@ -130,3 +130,4 @@ scraper('https://talk.collegeconfidential.com/university-notre-dame/2115112-notr
 scraper('https://talk.collegeconfidential.com/university-notre-dame/2065975-official-notre-dame-class-of-2022-rd-decisions-results-thread.html')
 
 csv_file.close()
+
