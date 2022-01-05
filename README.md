@@ -1,6 +1,5 @@
 # College-Prediction
-Project- Overview
-Many have tried, many have failed. Few trailblazers are ambitious enought to chase acceptance into the top 15 universites of the United States. Known for their grueling admissions process and heartbreaking decisions, the top 15 are at the pinnacle of every student's dream. In this project, we will be attempting to predict college acceptance for undergraduate students into top 15 national universities. The universities covered in this project will be strictly colleges from the United States.
+Project- Overview:  Many have tried, many have failed. Few trailblazers are ambitious enought to chase acceptance into the top 15 universites of the United States. Known for their grueling admissions process and heartbreaking decisions, the top 15 are at the pinnacle of every student's dream. In this project, we will be attempting to predict college acceptance for undergraduate students into top 15 national universities. The universities covered in this project will be strictly colleges from the United States.
 
 Top 15 universites
 
